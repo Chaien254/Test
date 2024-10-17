@@ -58,20 +58,25 @@ session_start();
             box-sizing: border-box;
             padding: 10px;
         }
+
         .breadcrumbs a.current {
             color: #111;
             font-weight: bold;
         }
+
         .breadcrumbs a {
             color: #ccc;
         }
+
         .no-click {
             pointer-events: none;
             color: #ccc;
         }
+
         .breadcrumbs a:hover {
             color: #296489;
         }
+
         .breadcrumbs .divider {
             margin: 0 .3em;
             opacity: .35;
@@ -96,6 +101,7 @@ session_start();
         </div>
     </div>
 </div>
+
 <form method="post" action="giohang.php">
     <div class="cart-page">
         <!-- Cột trái: Giỏ hàng -->
@@ -118,6 +124,7 @@ session_start();
                         $cart = isset($_SESSION['cart']) ? $_SESSION['cart'] : [];
                         $count = 0; // Số thứ tự
                         $total = 0; // Tổng giỏ hàng
+
                         if (empty($cart)) { // Kiểm tra giỏ hàng có rỗng không
                             echo '<tr><td colspan="7">Giỏ hàng của bạn trống.</td></tr>'; // Thông báo nếu giỏ hàng trống
                         } else {
@@ -148,6 +155,8 @@ session_start();
                         }
                         ?>
                     </tbody>
+
+
                     </table>
                     <div class="cart-actions">
                         <ul class="continue-shopping">
@@ -159,6 +168,7 @@ session_start();
                 </div>
             </div>
         </div>
+
         <!-- Cột phải: Tổng giỏ hàng -->
         <div class="right_column">
             <div class="cart-collaterals">
@@ -249,3 +259,5 @@ session_start();
     </div>
 </body>
 </html>
+
+
